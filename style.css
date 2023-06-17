@@ -1,0 +1,132 @@
+:root{
+--Red: hsl(0, 100%, 74%); 
+--Green: hsl(154, 59%, 51%);
+--Blue: hsl(248, 32%, 49%);
+--Dark-Blue: hsl(249, 10%, 26%); 
+--Grayish-Blue: hsl(246, 25%, 77%);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+body{
+    width: 100%;
+    height: 100%;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: url(./images/bg-intro-desktop.png);
+    background-color: var(--Red);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.left{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+.rigth{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background-color: white;
+    margin-top: 20px;
+    row-gap: 15px;
+    border-radius: 10px;
+}
+h1{
+    font-size: 40px;
+    color: white;
+    line-height: 3rem;
+    margin-bottom:20px ;
+}
+.left>p{
+    color: white;
+}
+button{
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-weight: 100;
+    font-size: 14px;
+}
+.try{ 
+    background-color: var(--Blue);
+}
+input{
+    height: 50px;
+    padding: 20px;
+    color: black;
+    font-weight: 500;
+    border-radius: 5px;
+    border: 1px solid black;
+    width: 100%;
+
+}
+.submit{
+    background-color: var(--Green);  
+}
+.content{
+    color: var(--Grayish-Blue);
+    font-size: 10px;
+    text-align: center;
+}
+.submit:hover{
+    cursor: pointer;
+    opacity: .8;
+}
+.error-text{
+    color: red;
+    font-size:10px ;
+    text-align: end;
+    display: none;
+}
+.error{
+    border: 1px solid red;
+    background-image: url(./images/icon-error.svg);
+    background-repeat: no-repeat;
+    background-position:center;
+    background-position-x:360px;
+}
+.active {
+    display: block;
+}
+@media screen and (max-width:380px ) {
+    .container{
+        background-image: url(./images/bg-intro-mobile.png);
+        flex-direction: column;
+        padding-top: 75px;
+        height: 100%;
+        }
+     .left , .rigth{
+        width: 80%;
+        align-items: center;
+    }
+    h1{
+        font-size: 30px;
+        text-align: center;
+        line-height: 2.4rem;
+    }
+    .left>p{
+        text-align: center;
+        margin-bottom: 50px;        
+    }
+    .form{
+        margin-bottom: 80px;
+    }
+}
